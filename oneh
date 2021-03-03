@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+struct emp 
+{
+    char id[4];
+    char company[10];
+};
+typedef struct emp e;
+int main()
+{
+     e e1;
+    strcpy(e1.id,"123");
+    strcpy(e1.company,"cds");
+    
+     printf("%s\t",e1.id);
+     printf("%s\n",e1.company);        
+
+    e *e2=(e *)malloc(sizeof(e));
+    strcpy(e2->id,"223");
+    strcpy(e2->company,"xyz");
+   
+    printf("%s\t",e2->id);
+     printf("%s\n",e2->company);      
+
+    return 0;
+}
